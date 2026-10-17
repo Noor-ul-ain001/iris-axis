@@ -2,17 +2,7 @@ import { useRef, useState } from 'react'
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from '../lib/motion'
 import { useReveal } from '../lib/useReveal'
 import Icon from './Icon'
-
-// Draft answers: have them reviewed against your actual service terms before launch.
-const FAQS = [
-  ['Do I need to buy new CCTV cameras?', 'Usually not. We start by reviewing your existing cameras and recorder. If a camera cannot be accessed securely or the image is not usable, we will tell you during the consultation.'],
-  ['How do I securely authorize camera access?', 'Access is set up with our team through a secure onboarding process. We never ask for camera passwords through this website or our assistant.'],
-  ['Can you monitor my property overnight?', 'Yes. Monitoring windows, including evenings and overnight, are agreed as part of your package and depend on staffing availability.'],
-  ['What happens when suspicious activity is detected?', 'The operator reviews the footage, then follows the escalation procedure you agreed during onboarding: who is contacted, in what order, and how the event is documented.'],
-  ['Will I be notified of incidents?', 'Yes. Designated contacts are notified using the methods in your plan, and incidents are recorded in time-stamped reports.'],
-  ['Can IRIS AXIS contact 911?', 'IRIS AXIS is a remote monitoring service, not an emergency responder. Whether and when authorities are contacted is defined in writing during onboarding.'],
-  ['Does remote monitoring replace an on-site security guard?', 'Not always. Remote monitoring suits many properties at a lower cost, but some sites need physical presence. We will tell you honestly which fits your situation.'],
-]
+import { FAQS } from '../lib/content'
 
 function Item({ q, a, open, onToggle, i }) {
   const body = useRef(null)

@@ -3,13 +3,7 @@ import { gsap, ScrollTrigger, useGSAP, isDesktop } from '../lib/motion'
 import { useReveal } from '../lib/useReveal'
 import IrisScene from './IrisScene'
 import Icon from './Icon'
-
-const STEPS = [
-  { icon: 'chat', title: 'Consultation', text: 'You explain your property type, existing cameras, monitoring requirements and budget.', hud: 'Scoping site' },
-  { icon: 'lock', title: 'Secure Setup', text: 'You authorize the required camera access through an approved, secure onboarding process.', hud: 'Linking feeds' },
-  { icon: 'activity', title: 'Remote Monitoring', text: 'Assigned personnel observe the agreed camera feeds according to the contracted schedule.', hud: 'Operators live' },
-  { icon: 'file', title: 'Incident Reporting', text: 'Potential concerns are documented, reported to designated contacts and escalated per the agreed procedure.', hud: 'Report filed' },
-]
+import { STEPS } from '../lib/content'
 
 export default function HowItWorks() {
   const root = useRef(null)

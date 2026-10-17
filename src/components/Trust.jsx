@@ -3,19 +3,7 @@ import { gsap, useGSAP, prefersReducedMotion, scrollToTarget } from '../lib/moti
 import { useReveal } from '../lib/useReveal'
 import Icon from './Icon'
 import { LogoMark } from './Logo'
-
-const PRACTICES = [
-  'Explicit client authorization for camera access',
-  'Least-privilege access',
-  'Secure credential management',
-  'Encryption where technically supported',
-  'Confidentiality obligations for personnel',
-  'Restricted access to camera feeds',
-  'Documented incident handling',
-  'Access revoked when service ends',
-  'Transparent monitoring schedules',
-  'Privacy-conscious procedures',
-]
+import { PRACTICES } from '../lib/content'
 
 export default function Trust() {
   const root = useRef(null)

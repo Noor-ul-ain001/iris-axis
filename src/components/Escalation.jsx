@@ -2,13 +2,7 @@ import { useRef } from 'react'
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from '../lib/motion'
 import { useReveal, scramble } from '../lib/useReveal'
 import Icon from './Icon'
-
-const FLOW = [
-  { icon: 'eye', title: 'Observe', text: 'Operator spots potential activity on an authorized feed.' },
-  { icon: 'radar', title: 'Verify', text: 'Footage is reviewed against your site notes and schedule.' },
-  { icon: 'bell', title: 'Notify', text: 'Designated contacts are alerted in the agreed order.' },
-  { icon: 'file', title: 'Document', text: 'A time-stamped record is filed for your review.' },
-]
+import { FLOW } from '../lib/content'
 
 const LOG = [
   ['22:14:07', 'CAM 02', 'Vehicle at gate · no action'],

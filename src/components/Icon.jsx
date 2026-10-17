@@ -106,6 +106,7 @@ const PATHS = {
       <circle pathLength="1" cx="12" cy="10" r="2.3" />
     </>
   ),
+  refresh: <path pathLength="1" d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3L19.5 9M19.5 4v5h-5" />,
   arrow: <path pathLength="1" d="M5 12h14M13 6l6 6-6 6" />,
   check: <path pathLength="1" d="M5 12.5l4.5 4.5L19 7.5" />,
   chevron: <path pathLength="1" d="m6 9 6 6 6-6" />,

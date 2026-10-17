@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { gsap, useGSAP, prefersReducedMotion, scrollToTarget } from '../lib/motion'
 import Logo from './Logo'
 import Icon from './Icon'
+import { COMPANY_EMAIL } from '../lib/company'
 
 const COMPANY = [
   ['About', '#about'],
@@ -46,8 +47,8 @@ export default function Footer() {
           <div className="footer-brand">
             <Logo />
             <p>Professional remote CCTV monitoring for U.S. homes and businesses.</p>
-            <a className="footer-mail" href="mailto:[EMAIL]">
-              <Icon name="mail" size={18} /> [EMAIL]
+            <a className="footer-mail" href={`mailto:${COMPANY_EMAIL}`}>
+              <Icon name="mail" size={18} /> {COMPANY_EMAIL}
             </a>
           </div>
           <div className="footer-col">

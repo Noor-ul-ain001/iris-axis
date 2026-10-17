@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import Icon from './Icon'
+import { PROPERTY_TYPES, submitLead } from '../lib/leads'
 
-// Lead form. Not wired to a backend yet: connect `onSubmit` to your CRM or form endpoint.
+// Lead form. Submissions go through `submitLead` (see lib/leads.js).
 export default function LeadForm({ submitLabel }) {
   const [sent, setSent] = useState(false)
 
@@ -19,8 +20,9 @@ export default function LeadForm({ submitLabel }) {
   return (
     <form
       className="lead-form"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault()
+        await submitLead({ ...Object.fromEntries(new FormData(e.currentTarget)), source: 'form' })
         setSent(true)
       }}
     >
@@ -41,11 +43,9 @@ export default function LeadForm({ submitLabel }) {
           <option value="" disabled>
             Select…
           </option>
-          <option>Home / Residential</option>
-          <option>Retail / Commercial</option>
-          <option>Warehouse / Industrial</option>
-          <option>Construction site</option>
-          <option>Multi-site portfolio</option>
+          {PROPERTY_TYPES.map((t) => (
+            <option key={t}>{t}</option>
+          ))}
         </select>
         <label htmlFor="lf-type" className="is-static">
           Property type

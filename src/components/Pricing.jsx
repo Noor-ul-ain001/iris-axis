@@ -2,61 +2,7 @@ import { useRef } from 'react'
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion, scrollToTarget } from '../lib/motion'
 import { useReveal } from '../lib/useReveal'
 import Icon from './Icon'
-
-const PLANS = [
-  {
-    tier: 'Essential',
-    price: 99,
-    blurb: 'Smaller properties requiring limited monitoring.',
-    features: [
-      'Agreed number of authorized camera feeds',
-      'Selected monitoring hours',
-      'Basic suspicious activity reporting',
-      'Standard email notifications',
-      'Monthly monitoring summary',
-      'Standard customer support',
-    ],
-    cta: 'Choose Essential',
-  },
-  {
-    tier: 'Professional',
-    price: 199,
-    blurb: 'Homes and small to medium-sized businesses.',
-    features: [
-      'Expanded camera coverage',
-      'Longer monitoring windows',
-      'Priority incident notifications',
-      'Designated contact procedures',
-      'Detailed incident reports',
-      'Regular service reviews',
-      'Enhanced customer support',
-    ],
-    cta: 'Choose Professional',
-    featured: true,
-  },
-  {
-    tier: 'Enterprise',
-    price: 399,
-    blurb: 'Larger commercial facilities with complex requirements.',
-    features: [
-      'Multiple feeds or locations',
-      'Customized monitoring schedules',
-      'Detailed incident documentation',
-      'Multi-contact notification workflows',
-      'Dedicated account coordination',
-      'Custom reporting',
-      'Tailored escalation procedures',
-    ],
-    cta: 'Choose Enterprise',
-  },
-  {
-    tier: 'Custom',
-    price: null,
-    blurb: 'Multi-site portfolios or unusual requirements.',
-    features: ['Custom notification procedures', 'Agreed service levels', 'Personalized onboarding'],
-    cta: 'Get Custom Pricing',
-  },
-]
+import { PLANS } from '../lib/content'
 
 export default function Pricing() {
   const root = useRef(null)
