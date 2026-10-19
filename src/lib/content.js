@@ -49,7 +49,7 @@ export const SERVICES = [
 export const PLANS = [
   {
     tier: 'Essential',
-    price: 99,
+    price: 499,
     blurb: 'Smaller properties requiring limited monitoring.',
     features: [
       'Agreed number of authorized camera feeds',
@@ -63,7 +63,7 @@ export const PLANS = [
   },
   {
     tier: 'Professional',
-    price: 199,
+    price: 699,
     blurb: 'Homes and small to medium-sized businesses.',
     features: [
       'Expanded camera coverage',
@@ -79,7 +79,7 @@ export const PLANS = [
   },
   {
     tier: 'Enterprise',
-    price: 399,
+    price: 899,
     blurb: 'Larger commercial facilities with complex requirements.',
     features: [
       'Multiple feeds or locations',
@@ -94,10 +94,10 @@ export const PLANS = [
   },
   {
     tier: 'Custom',
-    price: null,
+    price: 1199,
     blurb: 'Multi-site portfolios or unusual requirements.',
     features: ['Custom notification procedures', 'Agreed service levels', 'Personalized onboarding'],
-    cta: 'Get Custom Pricing',
+    cta: 'Choose Custom',
   },
 ]
 
